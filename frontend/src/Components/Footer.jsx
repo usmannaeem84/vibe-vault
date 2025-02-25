@@ -9,7 +9,7 @@ const Footer = () => {
 
       <div className="Flogo flex w-full sm:w-[40%]  flex-col justify-between gap-2 ">
      <NavLink to="/">
-      <h1 className="logo-font drop-shadow-[0_2px_4px_rgba(234,179,8,0.3)] animate-gradient bg-gradient-to-r from-amber-300 via-amber-600 to-yellow-700 bg-[length:200%] bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter hover:skew-y-1 transition-transform duration-300 cursor-pointer">
+      <h1 className="logo-font lg:w-[50%]  w-[50%]   drop-shadow-[0_2px_4px_rgba(234,179,8,0.3)] animate-gradient bg-gradient-to-r from-amber-300 via-amber-600 to-yellow-700 bg-[length:200%] bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter hover:skew-y-1 transition-transform duration-300 cursor-pointer">
         VibeVault.
       </h1>
     </NavLink>
