@@ -34,7 +34,7 @@ const Cart = () => {
       
       <div className="flex flex-col gap-1 mb-8">
         <div className="flex gap-2 items-center">
-          <p className="text-xl sm:text-2xl permanent font-medium text-gray-500">YOUR</p>
+          <p className="text-xl sm:text-2xl permanent font-medium text-yellow-500">YOUR</p>
           <p className="text-xl sm:text-2xl permanent font-medium">CART</p>
           <div className="w-9 sm:w-11 h-[2px] bg-black"></div>
         </div>
@@ -77,7 +77,7 @@ const Cart = () => {
 
         <div className='w-full sm:w-[450px]'>
           <TotalAmount></TotalAmount>
-          <button onClick={()=>navigate("/place-order")} className='bg-black active:bg-gray-700 text-white text-sm my-5 px-5 py-3'>PROCEED TO CHECKOUT</button>
+          <button onClick={()=>navigate("/place-order")} className='bg-yellow-500 active:bg-yellow-700 text-white text-sm my-5 px-5 py-3'>PROCEED TO CHECKOUT</button>
         </div>
 
       </div>

@@ -82,14 +82,14 @@ const Product = () => {
 
             {
               productData.sizes.map((item, index) => (
-                <button onClick={() => setSize(item)} key={index} className={` bg-gray-200 border-0 py-2 border-2 ${size === item ? "border-cyan-700" : ""} px-4`} >{item}</button>
+                <button onClick={() => setSize(item)} key={index} className={` bg-gray-200 border-0 py-2 border-2 ${size === item ? "border-yellow-600" : ""} px-4`} >{item}</button>
               ))
             }
 
           </div>
         </div>
        
-          <button onClick={()=>AddCart(productData._id ,size)} className='bg-black active:bg-gray-700 text-white text-base my-6 px-5 py-3'>ADD TO CART</button>
+          <button onClick={()=>AddCart(productData._id ,size)} className='bg-yellow-600  active:bg-yellow-700 text-white text-base my-6 px-5 py-3'>ADD TO CART</button>
         
         <hr className='h-[1.1px] bg-gray-500 my-4' />
         <p className='text-sm text-gray-500'>100% Original product.</p>

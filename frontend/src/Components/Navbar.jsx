@@ -3,6 +3,7 @@ import { assets } from '../assets/assets';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { ProductContext } from '../Context/Context';
 
+
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -22,26 +23,28 @@ const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between py-5 font-medium">
-            <NavLink to="/">
-                <img src={assets.logo} alt="Logo" className="w-36" />
-            </NavLink>
+       <NavLink to="/">
+  <h1 className="logo-font drop-shadow-[0_2px_4px_rgba(234,179,8,0.3)] animate-gradient bg-gradient-to-r from-amber-300 via-amber-600 to-yellow-700 bg-[length:200%] bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter hover:skew-y-1 transition-transform duration-300 cursor-pointer">
+    VibeVault.
+  </h1>
+</NavLink>
 
-            <ul className="flex items-center justify-center gap-7 hidden sm:flex text-gray-700">
+            <ul className="flex items-center justify-center gap-7 hidden sm:flex text-gray-800">
                 <NavLink to="/" className="flex flex-col items-center gap-1">
                     <p>HOME</p>
-                    <hr className="w-2/4 h-[1.5px] bg-gray-700 border-none hidden" />
+                    <hr className="w-2/4 h-[1.5px] bg-yellow-500 border-none hidden" />
                 </NavLink>
                 <NavLink to="/collection" className="flex flex-col items-center gap-1">
                     <p>COLLECTION</p>
-                    <hr className="w-2/4 h-[1.5px] bg-gray-700 border-none hidden" />
+                    <hr className="w-2/4 h-[1.5px] bg-yellow-500 border-none hidden" />
                 </NavLink>
                 <NavLink to="/about" className="flex flex-col items-center gap-1">
                     <p>ABOUT</p>
-                    <hr className="w-3/4 h-[1.5px] bg-gray-700 border-none hidden" />
+                    <hr className="w-3/4 h-[1.5px] bg-yellow-500 border-none hidden" />
                 </NavLink>
                 <NavLink to="/contact" className="flex flex-col items-center gap-1">
                     <p>CONTACT</p>
-                    <hr className="w-2/4 h-[1.5px] bg-gray-700 border-none hidden" />
+                    <hr className="w-2/4 h-[1.5px] bg-yellow-500 border-none hidden" />
                 </NavLink>
             </ul>
 
@@ -109,9 +112,8 @@ const Navbar = () => {
 
                 {/* Navbar for small screens */}
                 <div
-                    className={`flex flex-col absolute top-0 bottom-0 h-screen right-0 overflow-hidden transition-all bg-slate-100 ${
-                        visible ? 'w-full' : 'w-0'
-                    }`}
+                    className={`flex flex-col absolute top-0 bottom-0 h-screen right-0 overflow-hidden transition-all bg-slate-100 ${visible ? 'w-full' : 'w-0'
+                        }`}
                 >
                     <div
                         onClick={() => setVisible(false)}

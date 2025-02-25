@@ -8,7 +8,7 @@ const NewsLetter = () => {
 
       <div className="input w-full sm:w-1/2 flex items-center justify-between border my-2" >
         <input className='text-sm sm:text-base outline-none w-[80%] text-gray-500 pl-4' type="text" placeholder='Enter your email'/>
-        <button className='text-gray-300 bg-black px-5 py-3 text-sm sm:text-base'>SUBSCRIBE</button>
+        <button className='text-white bg-yellow-600 px-5 py-3 text-sm sm:text-base'>SUBSCRIBE</button>
       </div>
     </div>
   )

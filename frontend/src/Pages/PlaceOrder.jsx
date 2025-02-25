@@ -115,7 +115,7 @@ const PlaceOrder = () => {
         <div className="text-xl sm:text-2xl font-medium">
           <div className="flex flex-col gap-1 mb-8">
             <div className="flex gap-2 items-center">
-              <p className="text-xl sm:text-2xl permanent font-medium text-gray-500">DELIVERY</p>
+              <p className="text-xl sm:text-2xl permanent font-medium text-yellow-500">DELIVERY</p>
               <p className="text-xl sm:text-2xl permanent font-medium">INFORMATION</p>
               <div className="w-9 sm:w-11 h-[2px] bg-black"></div>
             </div>
@@ -167,13 +167,10 @@ const PlaceOrder = () => {
 
             <div onClick={() => setMethod("STRIPE")} className="payM flex gap-5 w-full sm:w-[60%] items-center px-3 py-2 border border-gray-200">
               <div className={`circle border ${method === "STRIPE" ? "bg-green-400" : ""}  w-3 h-3 rounded-full`}></div>
-              <img className="h-5" src={assets.stripe_logo} alt="Stripe" />
+              <img className="h-6" src={assets.stripe_logo} alt="Stripe" />
             </div>
 
-            <div onClick={() => setMethod("RAZOR")} className="payM flex gap-5 w-full sm:w-[75%] items-center px-3 py-2 border border-gray-200">
-              <div className={`circle border  ${method === "RAZOR" ? "bg-green-400" : ""} w-3 h-3 rounded-full`}></div>
-              <img className="h-5" src={assets.razorpay_logo} alt="Stripe" />
-            </div>
+           
 
             <div onClick={() => setMethod("COD")} className="flex gap-5 w-full  sm:w-[85%]  items-center px-3 py-2 border border-gray-200">
 
@@ -182,7 +179,7 @@ const PlaceOrder = () => {
             </div>
 
           </div>
-          <button type='submit' className="mt-8 w-full sm:w-40 bg-black  text-white py-2 px-5 text-sm sm:text-base font-semibold">PLACE ORDER</button>
+          <button type='submit' className="mt-8 w-full sm:w-40 bg-yellow-600  text-white py-2 px-5 text-sm sm:text-base font-semibold">PLACE ORDER</button>
         </div>
 
 

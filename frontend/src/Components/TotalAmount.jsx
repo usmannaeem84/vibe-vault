@@ -10,7 +10,7 @@ const totalAmount = () => {
     <div>
       <div className="flex flex-col gap-1 mb-6">
         <div className="flex gap-2 items-center">
-          <p className="text-xl sm:text-2xl font-medium permanent text-gray-500">CART</p>
+          <p className="text-xl sm:text-2xl font-medium permanent text-yellow-500">CART</p>
           <p className="text-xl sm:text-2xl permanent font-medium">TOTAL</p>
           <div className="w-9 sm:w-11 h-[2px] bg-black"></div>
         </div>

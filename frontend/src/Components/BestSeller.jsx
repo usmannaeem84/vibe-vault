@@ -5,14 +5,18 @@ import { ProductContext } from '../Context/Context'
 
 const BestSeller = () => {
 const {products} = useContext(ProductContext)
+console.log(products);
+
 
     const [BestSeller,setBestSeller] = useState([])
+    
     useEffect(() => {
         if (products && products.length > 0) {
             const bestProduct = products.filter((prod) => prod.bestseller);
             setBestSeller(bestProduct.slice(0, 5));
         }
-    }, []);
+    }, [products]);
+    console.log(BestSeller);
 
 
     return (

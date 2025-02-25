@@ -129,7 +129,7 @@ if(showSearch && search){
         <div className='flex justify-between sm:flex-row sm:gap-0 gap-4 flex-col mb-5 '>
 
           <div className="latestText flex gap-2 items-center">
-            <p className='text-xl sm:text-3xl  font-medium text-gray-500'>ALL</p>
+            <p className='text-xl sm:text-3xl  font-medium text-yellow-500'>ALL</p>
             <p className='text-xl sm:text-3xl  font-medium' >COLLECTIONS</p>
             <p className='w-9 sm:w-11 h-[2px] bg-black'></p>
           </div>

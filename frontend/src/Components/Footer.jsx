@@ -8,7 +8,11 @@ const Footer = () => {
       <div  className='footer flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center'>
 
       <div className="Flogo flex w-full sm:w-[40%]  flex-col justify-between gap-2 ">
-      <NavLink onClick={()=>scrollTo(0,0)} to="/" >  <img className='cursor-pointer w-32' src={assets.logo} alt="" /></NavLink>
+     <NavLink to="/">
+      <h1 className="logo-font drop-shadow-[0_2px_4px_rgba(234,179,8,0.3)] animate-gradient bg-gradient-to-r from-amber-300 via-amber-600 to-yellow-700 bg-[length:200%] bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter hover:skew-y-1 transition-transform duration-300 cursor-pointer">
+        VibeVault.
+      </h1>
+    </NavLink>
         <p className='text-gray-500 text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       </div>
       <div className="Fdetails w-full sm:w-[60%] flex justify-around flex-col sm:flex-row ">

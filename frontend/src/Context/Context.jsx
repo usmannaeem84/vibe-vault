@@ -1,14 +1,17 @@
 import React, { createContext,useEffect,useState } from "react";
-// import { products } from "../assets/assets";
+import { products } from "../assets/assets.js";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import axios from "axios"
 
 
+
+
 export const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
+
 
 
 
@@ -22,7 +25,7 @@ const [showSearch , setShowSearch] = useState(false)
 const [cartItems,setCartItems] = useState({})
 const navigate = useNavigate()
 const [token,setToken] = useState("")
-const [products,setProducts] = useState([])
+// const [products,setProducts] = useState([])
 
 
 const AddCart = async (itemId,size)=>{
@@ -155,26 +158,26 @@ function clearCart() {
 }
 
 
-const fetchingProduct = async () => {
+// const fetchingProduct = async () => {
 
-    try {
-        const response = await axios.get( BackendUrl + '/api/product/list')
-        if (response.data.success) {
-            toast.error(response.data.message)
-            setProducts(response.data.products)
-        }  else{
-            toast.error(response.data.message)
-        }
+//     try {
+//         const response = await axios.get( BackendUrl + '/api/product/list')
+//         if (response.data.success) {
+//             toast.error(response.data.message)
+//             setProducts(response.data.products)
+//         }  else{
+//             toast.error(response.data.message)
+//         }
 
 
 
-    } catch (error) {
-        console.log(error);
-        toast.error(error)
+//     } catch (error) {
+//         console.log(error);
+//         toast.error(error)
         
-    }
+//     }
 
-}
+// }
 
 
 const getUserCart = async (token) => {
@@ -199,9 +202,10 @@ const getUserCart = async (token) => {
 }
 
 
-useEffect(()=>{
-    fetchingProduct()
-},[])
+
+// useEffect(()=>{
+//     fetchingProduct()
+// },[])
 
 
 useEffect(()=>{
@@ -210,6 +214,8 @@ useEffect(()=>{
         getUserCart()
     }
 },[])
+
+
 
 
 

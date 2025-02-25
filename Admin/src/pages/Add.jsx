@@ -169,7 +169,7 @@ const Add = ({ token }) => {
           <div className="flex gap-3">
             {["S", "M", "L", "XL", "XXL"].map((size) => (
               <div key={size} onClick={() => setSizes(prev => prev.includes(size) ? prev.filter(item => item !== size) : [...prev, size])}>
-                <p className={` ${sizes.includes(size) ? "bg-pink-200" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>{size}</p>
+                <p className={` ${sizes.includes(size) ? "bg-yellow-500 text-white"  : "bg-slate-200"} px-3 py-1 cursor-pointer`}>{size}</p>
               </div>
             ))}
           </div>
