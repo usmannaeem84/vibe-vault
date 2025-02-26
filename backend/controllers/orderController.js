@@ -15,7 +15,10 @@ const placeOrder = async (req, res) => {
     
     try {
         
-        const { userId, items, amount, address } = req.body;
+        const userId = req.user._id
+        // const { userId, items, amount, address } = req.body;
+        const {items, amount, address } = req.body;
+
 
         const orderData = {
             userId,
@@ -27,6 +30,8 @@ const placeOrder = async (req, res) => {
             date: Date.now()
         }
 
+        console.log(orderData);
+        
         const newOrder = new orderModel(orderData)
         await newOrder.save()
         
@@ -48,8 +53,10 @@ const placeOrder = async (req, res) => {
 const placeOrderStripe = async (req, res) => {
     
     try {
-        
-        const { userId, items, amount, address } = req.body;
+      
+        const userId = req.user._id
+        const { items, amount, address } = req.body;
+        // const { userId, items, amount, address } = req.body;
         const { origin } = req.headers;
 
         const orderData = {
@@ -106,8 +113,8 @@ const placeOrderStripe = async (req, res) => {
 
 // Verify stripe
 const verifyStripe = async (req, res) => {
-    const { orderId, success, userId } = req.body
-
+    const { orderId, success } = req.body
+    const userId = req.user._id
 
     try {
         
@@ -154,9 +161,12 @@ const userOrders = async (req, res) => {
     
     try {
         
-        const { userId } = req.body;
+        const userId = req.user._id
+        
+        
+        const orders = await orderModel.find({userId});
 
-        const orders = await orderModel.find({ userId });
+        
         res.json({success:true , orders})
 
     } catch (error) {
