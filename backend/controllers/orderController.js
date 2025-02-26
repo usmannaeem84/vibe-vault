@@ -16,9 +16,8 @@ const placeOrder = async (req, res) => {
     try {
         
         const userId = req.user._id
-        // const { userId, items, amount, address } = req.body;
-        const {items, amount, address } = req.body;
 
+        const {items, amount, address } = req.body;
 
         const orderData = {
             userId,
@@ -56,7 +55,6 @@ const placeOrderStripe = async (req, res) => {
       
         const userId = req.user._id
         const { items, amount, address } = req.body;
-        // const { userId, items, amount, address } = req.body;
         const { origin } = req.headers;
 
         const orderData = {
