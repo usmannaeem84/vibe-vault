@@ -72,7 +72,7 @@ const PlaceOrder = () => {
             setCartItems({})
             navigate("/my-order")
           } else {
-            toast.error(response.data.message + "hello")
+            toast.error(response.data.message)
           }
           break;
         case 'STRIPE':
