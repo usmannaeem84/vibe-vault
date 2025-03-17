@@ -72,8 +72,6 @@ if (token) {
         toast.error(error.message)
         
     }
-}else{
-    toast.error("Please login ")
 }
 
 
