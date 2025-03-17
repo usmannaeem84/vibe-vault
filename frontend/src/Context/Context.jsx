@@ -52,26 +52,28 @@ if (cart[itemId]) {
 
 
 
-  setCartItems(cart);
+setCartItems(cart);
+
+toast.success(
+    <div>
+  Item added to cart.{" "}
+  <NavLink onClick={()=>scrollTo(0,0)} className="text-green-600 border-b-[1px] border-green-600" to="/cart">
+    Go to cart
+  </NavLink>
+</div>
+)
 
 if (token) {
     try {
-     await axios.post(BackendUrl + "/api/cart/add", {itemId,size},{ headers : {token}})
-     toast.success(
-        <div>
-          Item added to cart.{" "}
-          <NavLink onClick={()=>scrollTo(0,0)} className="text-green-600 border-b-[1px] border-green-600" to="/cart">
-            Go to cart
-          </NavLink>
-        </div>
-      );
-
-  
+        await axios.post(BackendUrl + "/api/cart/add", {itemId,size},{ headers : {token}})
+       
     } catch (error) {
         console.log(error);
         toast.error(error.message)
         
     }
+}else{
+    toast.error("Please login ")
 }
 
 

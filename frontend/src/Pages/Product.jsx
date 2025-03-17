@@ -111,9 +111,9 @@ const Product = () => {
 </div>
 <div className="decInfo border border-gray-300 p-5">
 
-<p className='text-gray-500 text-base my-2'>An e-commerce website is an online platform that facilitates the buying and selling of products or services over the internet. It serves as a virtual marketplace where businesses and individuals can showcase their products, interact with customers, and conduct transactions without the need for a physical presence. E-commerce websites have gained immense popularity due to their convenience, accessibility, and the global reach they offer.</p>
+<p className='text-gray-500 text-base my-2'>Step up your fashion game with Vibe Vault’s premium apparel, where comfort meets trendsetting style. Designed for those who love to stand out, our clothing blends high-quality fabrics, perfect fits, and timeless designs to keep you looking fresh no matter the occasion. Whether you're dressing up for a night out or keeping it casual, our versatile pieces adapt to your vibe effortlessly.</p>
 
-<p className='text-gray-500 text-base my-2'>E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own dedicated page with relevant information.</p>
+<p className='text-gray-500 text-base my-2'>Upgrade your wardrobe with Vibe Vault’s premium collection—crafted for comfort, designed for style. Whether you're going for a laid-back casual look or a bold statement outfit, our high-quality fabrics and perfect fits ensure you stay ahead in fashion. Elevate your vibe, embrace the trend, and make every outfit count!</p>
 
 
 </div>

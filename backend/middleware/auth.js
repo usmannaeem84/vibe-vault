@@ -7,7 +7,7 @@ const authUser = async (req, res, next) => {
 
 
     if (!token) {
-        return res.json({success:false, message: "Not Authorized please Login Again"})
+        return res.json({success:false, message: "Not Authorized please Login "})
     }
 
     try {
