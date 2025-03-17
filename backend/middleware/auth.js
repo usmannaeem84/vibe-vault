@@ -14,9 +14,9 @@ const authUser = async (req, res, next) => {
 
     // Check if token exists
     if (!token) {
-        return res.status(401).json({ 
+        return res.json({ 
             success: false, 
-            message: "No token provided, please login again" 
+            message: "Please log in to place your order." 
         });
     }
 
@@ -30,7 +30,7 @@ const authUser = async (req, res, next) => {
         if (!user) {
             return res.status(404).json({ 
                 success: false, 
-                message: "User not found, please login again" 
+                message: "Account not found, please login again" 
             });
         }
 
